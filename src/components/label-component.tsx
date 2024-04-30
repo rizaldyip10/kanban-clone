@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface LabelProps {
-    variant?: 'red' | 'green' | 'purple' | 'white' | 'gray' | string;
+    variant?: string;
     text?: string;
     className?: string;
 }

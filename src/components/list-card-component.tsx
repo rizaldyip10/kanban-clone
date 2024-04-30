@@ -3,7 +3,7 @@ import Label from './label-component'
 import Card from './card-component'
 
 interface ListItems {
-  desc: 'Done' | 'Ongoing';
+  desc: string;
   listName: string;
 }
 
@@ -12,22 +12,22 @@ interface UserItems {
 }
 
 interface TagDescItems {
-  variant: 'red' | 'green' | 'purple' | 'white' | 'gray' ;
+  variant: string;
   description: string;
 }
 
 interface TaskItems {
   title: string;
-  description: string;
-  list: ListItems[];
+  description?: string;
+  list?: ListItems[];
   userList?: UserItems[] | undefined
-  note: TagDescItems
+  note?: TagDescItems
 }
 
 interface ListCardProps {
     labelTitle: string;
-    task?: TaskItems[] | undefined;
-    color: 'red' | 'green' | 'purple' | 'white' | 'gray' | string;
+    task?: TaskItems[];
+    color: string;
 }
 
 const ListCard: React.FC<ListCardProps> = ({ labelTitle, task, color }) => {

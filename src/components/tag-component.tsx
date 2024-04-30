@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface TagProps {
-    variant?: 'red' | 'green' | 'purple' | 'white' | 'gray';
+    variant?: string;
     text?: string;
     className?: string;
 }

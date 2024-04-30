@@ -5,7 +5,7 @@ import checked from '../assets/Checked.png'
 import unchecked from '../assets/Unchecked.png'
 
 interface ListItems {
-    desc: 'Done' | 'Ongoing';
+    desc: string;
     listName: string;
 }
 
@@ -14,7 +14,7 @@ interface UserItems {
 }
 
 interface TagDescItems {
-    variant: 'red' | 'green' | 'purple' | 'white' | 'gray' ;
+    variant: string;
     description: string;
 }
 
@@ -22,7 +22,7 @@ interface CardProps {
     title: string;
     description?: string;
     list?: ListItems[];
-    tagDesc: TagDescItems;
+    tagDesc?: TagDescItems;
     userList?: UserItems[];
 }
 

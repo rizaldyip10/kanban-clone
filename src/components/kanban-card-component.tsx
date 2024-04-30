@@ -2,7 +2,7 @@ import React from 'react'
 import ListCard from './list-card-component'
 
 interface ListItems {
-  desc: 'Done' | 'Ongoing';
+  desc: string;
   listName: string;
 }
 
@@ -11,22 +11,22 @@ interface UserItems {
 }
 
 interface TagDescItems {
-  variant: 'red' | 'green' | 'purple' | 'white' | 'gray' ;
+  variant: string;
   description: string;
 }
 
 interface TaskItems {
   title: string;
-  description: string;
-  list: ListItems[];
-  userList: UserItems[]
-  note: TagDescItems
+  description?: string;
+  list?: ListItems[];
+  userList?: UserItems[]
+  note?: TagDescItems
 }
 
 interface KanbanCardProps {
     labelTitle: string;
-    task?: TaskItems[] | undefined;
-    color: 'red' | 'green' | 'purple' | 'white' | 'gray' | string;
+    task?: TaskItems[];
+    color: string;
 }
 
 const KanbanCard: React.FC<KanbanCardProps> = ({ labelTitle, task, color }) => {

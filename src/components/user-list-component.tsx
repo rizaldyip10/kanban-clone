@@ -1,7 +1,10 @@
 import React from 'react'
 
+interface UserListItems {
+  imgURL?: string
+}
 interface UserListProps {
-    userList?: object[];
+    userList?: UserListItems[];
 }
 
 const UserList: React.FC<UserListProps> = ({ userList }) => {
