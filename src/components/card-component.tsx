@@ -4,12 +4,26 @@ import UserList from './user-list-component';
 import checked from '../assets/Checked.png'
 import unchecked from '../assets/Unchecked.png'
 
+interface ListItems {
+    desc: 'Done' | 'Ongoing';
+    listName: string;
+}
+
+interface UserItems {
+    imgURL: string
+}
+
+interface TagDescItems {
+    variant: 'red' | 'green' | 'purple' | 'white' | 'gray' ;
+    description: string;
+}
+
 interface CardProps {
     title: string;
     description?: string;
-    list?: object[];
-    tagDesc: object;
-    userList?: object[];
+    list?: ListItems[];
+    tagDesc: TagDescItems;
+    userList?: UserItems[];
 }
 
 const Card: React.FC<CardProps> = ({ title, description, list, tagDesc, userList }) => {
