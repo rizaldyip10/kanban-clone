@@ -36,7 +36,7 @@ const ListCard: React.FC<ListCardProps> = ({ labelTitle, task, color }) => {
         <Label text={labelTitle} variant={color} />
         {
             task?.map((item, index) => (
-                <Card key={index} title={item.title} description={item.description} tagDesc={item.note} list={item.list} userList={item.userList} />
+                <Card key={index} title={item.title} description={item?.description} tagDesc={item?.note} list={item?.list} userList={item?.userList} />
             ))
         }
     </div>

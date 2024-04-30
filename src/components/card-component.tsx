@@ -31,7 +31,7 @@ const Card: React.FC<CardProps> = ({ title, description, list, tagDesc, userList
     <div className='w-full h-fit bg-white p-4 flex flex-col gap-2 rounded-lg'>
         { userList && <UserList userList={userList} /> }
         <h1 className='text-base font-semibold font-sf-pro'>{ title }</h1>
-        <p className='text-sm font-normal font-sf-pro text-[#5A5A65]'>{ description }</p>
+        {description && <p className='text-sm font-normal font-sf-pro text-[#5A5A65]'>{ description }</p>}
         {
             list &&
             list.map((item, index) => (
